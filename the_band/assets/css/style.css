@@ -4,3 +4,70 @@
   margin: 0;
   box-sizing: border-box;
 }
+/* 1.Từ ngoài vào trong
+    2. Từ trên xuống dưới
+    3. Từ tổng quan đến chi tiết
+*/
+
+html {
+  font-family: Helvetica;
+}
+#main {
+}
+#header {
+  height: 46px;
+  background-color: black;
+}
+#nav,
+.subnav {
+  list-style: none;
+}
+#nav > li {
+  display: inline-block;
+}
+#nav li {
+  position: relative;
+}
+
+#nav > li > a {
+  color: #fff;
+  text-transform: uppercase;
+}
+#nav li a {
+  text-decoration: none;
+  line-height: 46px;
+  padding: 0 24px;
+  display: block;
+}
+#nav li:hover .subnav {
+  display: inline;
+}
+#nav .subnav li:hover a,
+#nav > li:hover > a {
+  color: black;
+  background-color: #ccc;
+}
+#nav .subnav {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  min-width: 160px;
+  top: 100%;
+  left: 0;
+}
+
+#nav .subnav a {
+  color: black;
+  padding: 0 12px;
+  line-height: 38px;
+}
+#nav .subnav:hover {
+  /* display: none; */
+}
+#slider {
+}
+#content {
+}
+#footer {
+}
