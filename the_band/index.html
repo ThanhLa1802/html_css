@@ -6,13 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Back Pink</title>
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
     <link rel="stylesheet" href="./assets/font/themify-icons/themify-icons.css">
 </head>
 <body>
     <div id="main">
         <div id="header">
-            <!-- Bgin Nav -->
-            <ul id="nav">
+            <!-- Begin Nav -->
+            <ul id = "nav">
                 <li><a href="#">Home</a></li>
                 <li><a href="#content">Band</a></li>
                 <li><a href="#tour">Tour</a></li>
@@ -23,9 +24,9 @@
                         <i class="nav-arrow-down ti-angle-down"></i>
                     </a>
                     <ul class="subnav">
-                        <li><a href="">Merchandise</a></li>
-                        <li><a href="">Extras</a></li>
-                        <li><a href="">Media</a></li>
+                        <li><a href="#">Merchandie</a></li>
+                        <li><a href="#">Extras</a></li>
+                        <li><a href="#">Media</a></li>
                     </ul>
                 </li>
             </ul>
@@ -35,8 +36,12 @@
             <div class="search-btn">
                 <i class="search-icon ti-search"></i>
             </div>
+            <div id = "mobile-menu" class="mobile-menu-btn">
+                <i class="menu-icon ti-menu"></i>
+            </div>
         </div>
         
+        <!-- Begin slider -->
         <div id="slider">
             <div class="text-content">
                 <h2 class="text-heading text-pink">
@@ -98,31 +103,31 @@
 
                     <!-- Places -->
                     <div class="row place-list">
-                        <div class="col place-item">
+                        <div class="col mt-16 s-col-full place-item">
                             <img src="./assets/img/places/HaNoi.jpg" alt="Ha Noi" class="place-img">
                             <div class="place-body">
                                 <h3 class="place-heading">Ha Noi</h3>
                                 <p class="place-time">Fri 19 Nov 2021</p>
                                 <p class="place-des">Autumn in Hanoi has special something!</p>
-                                <button class="btn js-buy-ticket">Buy Tickets</button>
+                                <button class="btn js-buy-ticket s-full-width">Buy Tickets</button>
                             </div>
                         </div>
-                        <div class="col place-item">
+                        <div class="col mt-16 s-col-full place-item">
                             <img src="./assets/img/places/DaLat.jpg" alt="Ha Noi" class="place-img">
                             <div class="place-body">
                                 <h3 class="place-heading">Da Lat</h3>
                                 <p class="place-time">Fri 27 Nov 2021</p>
                                 <p class="place-des">Da Lat - Flowers city is one of famouse city in VietNam!</p>
-                                <button class="btn js-buy-ticket">Buy Tickets</button>
+                                <button class="btn js-buy-ticket s-full-width">Buy Tickets</button>
                             </div>
                         </div>
-                        <div class="col place-item">
+                        <div class="col mt-16 s-col-full place-item">
                             <img src="./assets/img/places/HCMcity.png" alt="Ha Noi" class="place-img">
                             <div class="place-body">
                                 <h3 class="place-heading">Ho Chi Minh City</h3>
                                 <p class="place-time">Fri 31 Dec 2021</p>
                                 <p class="place-des">HCM city is he most active city in VietNam!</p>
-                                <button class="btn js-buy-ticket">Buy Tickets</button>
+                                <button class="btn js-buy-ticket s-full-width">Buy Tickets</button>
                             </div>
                         </div>
                         <div class="clear"></div>
@@ -135,18 +140,18 @@
                 <h2 class="section-heading">CONTACT</h2>
                 <p class="section-slogan">Fan? Drop a note!</p>
                 <div class="row contact-content">
-                    <div class="col col-half contact-infor">
+                    <div class="col s-col-full col-half contact-infor">
                         <p><i class="ti-location-pin"></i>Seoul, Korea</p>
-                        <p><i class="ti-mobile"></i>Phone: +19001008</p>
-                        <p><i class="ti-email"></i>Email: blackpink@gmail.com</p>
+                        <p><i class="ti-mobile"></i>Phone:<a href="tel:+96 9696969">+96 9696969</a></p>
+                        <p><i class="ti-email"></i>Email: <a href="mailto:blackpink@gmail.com">blackpink@gmail.com</a></p>
                     </div>
-                    <div class="col col-half contact-form">
+                    <div class="col s-col-full col-half contact-form">
                        <form action="">
                            <div class="row">
-                               <div class="col col-half">
+                               <div class="col s-col-full col-half s-mt-8">
                                    <input required type="text" name ="" placeholder="Name"  class="form-control">
                                </div>
-                                <div class="col col-half">
+                                <div class="col s-col-full col-half s-mt-8">
                                     <input required type="email" name="" placeholder="Email" class="form-control">
                                 </div>
                            </div>
@@ -155,7 +160,7 @@
                                    <input required type="text" name = "" placeholder="Message" class="form-control">
                                </div>
                            </div>
-                           <input class ="btn pull-right mt-16" type="submit" value="SEND">
+                           <input class ="btn pull-right mt-16 s-full-width" type="submit" value="SEND">
                        </form>
                     </div>
                 </div>
@@ -171,7 +176,6 @@
                 <a href=""><i class="ti-facebook"></i></a>
                 <a href=""><i class="ti-instagram"></i></a>
                 <a href=""><i class="ti-youtube"></i></a>
-                <a href=""><i class="ti-printerest"></i></a>
                 <a href=""><i class="ti-twitter"></i></a>
                 <a href=""><i class="ti-linkedin"></i></a>
             </div>
@@ -230,6 +234,34 @@
         modal_container.addEventListener('click', function(event){
             event.stopPropagation()
         })
+    </script>
+    <script>
+        var header  = document.getElementById('header')
+        var mobile_menu = document.getElementById('mobile-menu')
+        var header_height =header.clientHeight;
+        mobile_menu.onclick =  function(){
+            var is_close = header.clientHeight === header_height;
+            if (is_close){
+                header.style.height = 'auto';
+            }
+            else {
+                header.style.height = '46px';
+            }
+        }
+        var menu_items = document.querySelectorAll('#nav li a[href*="#"]');
+        for (var i = 0; i < menu_items.length; i++){
+            var menu_item = menu_items[i];
+            menu_item.onclick = function(event){
+                var is_parent_menu = this.nextElementSibling && this.nextElementSibling.classList.contains('subnav')
+                console.log(this)
+                if (is_parent_menu){
+                    event.preventDefault()
+                }  
+                else {
+                     header.style.height = null;
+                }
+            }
+        }
     </script>
 </body>
 </html>
